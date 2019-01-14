@@ -1,0 +1,19 @@
+(lang dune 1.7)
+
+(env
+ (standard
+  (ocamlopt_flags (:standard -S))
+  (c_flags (:standard -O2 -save-temps))
+  )
+
+ (lzcnt
+  (ocamlopt_flags (:standard -S -flzcnt))
+  (c_flags (:standard -O2 -save-temps -mlzcnt))
+  )
+
+ (popcnt
+  (ocamlopt_flags (:standard -S -fpopcnt))
+  (c_flags (:standard -O2 -save-temps -mpopcnt))
+  )
+)
+

@@ -1,0 +1,22 @@
+(library
+ (name pat)
+ (modules pat pat_params)
+ (c_names stub)
+ )
+
+(executable
+ (name test)
+ (modules test)
+ (libraries pat core))
+
+(library
+ (name pat_bench)
+ (modules bench)
+ (library_flags -linkall)
+ (libraries base)
+ (preprocess (pat pps ppx_bench)))
+
+(executable
+ (name main)
+ (modules main)
+ (libraries pat pat_bench core_bench.inline_benchmarks))

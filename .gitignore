@@ -1,0 +1,8 @@
+*.merlin
+_build
+*.log
+obj*/
+results/
+*perfmon.data
+bin/
+src/
